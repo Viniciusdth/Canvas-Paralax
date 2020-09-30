@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  /* background-color: black; */
+  z-index: 1;
+  margin:10% 2% 0% 2%;
+  padding-top: 0%;
+}
+
+.generate-tree-button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  z-index: 10;
+  left: 16%;
+  transform: translate(-50%, 0);
+  padding: 20px 30px;
+  border-radius:50px;
+  background: brown;
+  color: black;
+  font-size: 20px;
+  width: 300px;
+  overflow: hidden;
+}
+
+#viewport {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  perspective: 400;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.28, rgb(69,132,180)), color-stop(0.64, rgb(31,71,120)) );
+}
+
+#world {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+  background-color: rgba( 255, 0, 0, .2 );
+  z-index: -2;
+}
+
+#sky {
+  height: 50%;
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+#skyBackground {
+  background-image: linear-gradient(rgb(16,18,41),rgba(117,53,57,1), rgb(254,165,61));
+  height: 60%;
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  transform-style: flat;
+  transform: translate(0%, 0%)
+}
+#land {
+  /* background-image: linear-gradient(rgba(167, 101, 14, .7), rgba(0, 126, 23, 0.7)); */
+  height: 80%;
+  width: 150%;
+  position: absolute;
+  transform-style: flat;
+  z-index: 5;
+  margin-left: -11%;
+}
+#roadLand {
+  background-color:#252d1b;
+  transform-style: flat;
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  transform: translate(0%,125%)
+}
+
+.cloudBase {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.cloudLayer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  height: 150px;
+  margin-left: -150px;
+  margin-top: -50px;
+  opacity: 1;
+}
